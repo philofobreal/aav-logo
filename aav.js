@@ -12,15 +12,15 @@ var getTime = [];
 var randNums = [];
 
 function preload() {
-	song = loadSound('assets/decoder.mp3'); 
+	song = loadSound('assets/BP_lights.mp3'); 
 }
 
 function setup() {
 	myCanvas = createCanvas(windowWidth, windowHeight, 'p2d');
 	background(0);
-	frameRate(30);
+	frameRate(60);
 	smooth();
-	colorMode(HSB, 255, 255, 255, 255);
+	colorMode(HSB, 25, 25, 25, 0);
 
 
 	
@@ -57,7 +57,7 @@ var varRot = 0;
 
 function draw() {
 
-	vol = analyzer.getLevel() * 10;
+	vol = analyzer.getLevel() * 150;
 
 	// var numBands = numDots; //32768/2;
 	// var spectrum = fft.analyze(256);
@@ -88,7 +88,7 @@ function draw() {
 
 			
 		}
-		varRot = varRot + vol/100;
+		varRot = varRot + vol/1000;
 		time = time + 0.0001;
 		//noLoop();
 	pop();
@@ -105,8 +105,8 @@ function Dot(tempX, tempY, tempSpeed, tempSpeedY) {
 	this.speed = tempSpeed;
 	this.speedY = tempSpeedY;
 
-	this.alph = random(120,255);
-	this.c = color(random(100,255),255,255, this.alph);
+	this.alph = random(50,155);
+	this.c = color(random(0,15),255,255, this.alph);
 	
 
 	this.eleSize = random(2,10);
