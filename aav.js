@@ -20,7 +20,7 @@ function setup() {
 	background(0);
 	frameRate(60);
 	smooth();
-	colorMode(HSB, 25, 25, 25, 0);
+	colorMode(HSB, 125, 125, 125, 100);
 
 
 	
@@ -88,7 +88,7 @@ function draw() {
 
 			
 		}
-		varRot = varRot + vol/1000;
+		varRot = varRot + vol/500;
 		time = time + 0.0001;
 		//noLoop();
 	pop();
